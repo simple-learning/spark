@@ -42,6 +42,7 @@ object SimpleFPGrowth {
     val model = fpg.run(transactions)
 
     model.freqItemsets.collect().foreach { itemset =>
+
       println(s"${itemset.items.mkString("[", ",", "]")},${itemset.freq}")
     }
 
